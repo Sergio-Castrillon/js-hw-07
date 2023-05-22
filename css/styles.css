@@ -3,6 +3,11 @@
   --animation-duration: 250ms;
 }
 
+body p a {
+  color: #fff;
+  text-decoration: none;
+}
+
 .gallery {
   display: grid;
   max-width: 1140px;
