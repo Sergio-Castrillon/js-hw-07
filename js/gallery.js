@@ -18,16 +18,16 @@ const galleryMarkup = galleryItems
   .join("\n");
 containerGallery.insertAdjacentHTML("afterbegin", galleryMarkup);
 containerGallery.addEventListener("click", selectOriginalImage);
-function selectOriginalImage(event) {
-  event.preventDefault();
-  if(event.target.nodeName !== "IMG"){
+function selectOriginalImage(e) {
+  e.preventDefault();
+  if(e.target.nodeName !== "IMG"){
     return;
   }
-  const instance = basicLightbox.create(`<img src="${event.target.dataset.source}">`);
+  const instance = basicLightbox.create(`<img src="${e.target.dataset.source}">`);
   instance.show();
 
-  containerGallery.addEventListener("keydown", (event) => {
-    if(event.code === "Escape"){
+  containerGallery.addEventListener("keydown", (e) => {
+    if(e.code === "Escape"){
         instance.close();
     }
   });

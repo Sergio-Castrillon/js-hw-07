@@ -10,7 +10,7 @@ const galleryMarkup = galleryItems
   )
   .join("\n");
 listGallery.insertAdjacentHTML("afterbegin", galleryMarkup);
-listGallery.addEventListener("click", (event) => event.preventDefault());
+listGallery.addEventListener("click", (e) => e.preventDefault());
 
 let lightbox = new SimpleLightbox('.gallery a', { 
     captionsData: 'alt',
