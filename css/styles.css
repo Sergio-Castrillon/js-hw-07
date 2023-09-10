@@ -47,3 +47,22 @@ body p a {
 .gallery__link:hover {
   cursor: zoom-in;
 }
+
+.exit {
+  background-color: #e6e6e6;
+  width: 6em;
+  display: flex;
+  border-radius: 8px;
+  cursor: pointer;
+  height: 3em;
+  justify-content: center;
+  align-items: center;
+  transition: 500ms;
+}
+
+.exit:hover,
+.exit:hover a {
+  background-color: #0099ff;
+  transition: 250ms;
+  color: #fff;
+}
